@@ -14,6 +14,7 @@ import * as blueslip from "./blueslip";
 import * as bot_data from "./bot_data";
 import * as click_handlers from "./click_handlers";
 import * as compose from "./compose";
+import * as compose_closed_ui from "./compose_closed_ui";
 import * as compose_pm_pill from "./compose_pm_pill";
 import * as composebox_typeahead from "./composebox_typeahead";
 import * as condense from "./condense";
@@ -471,6 +472,7 @@ export function initialize_everything() {
     people.initialize(page_params.user_id, people_params);
     scroll_bar.initialize();
     message_viewport.initialize();
+    compose_closed_ui.initialize();
     initialize_kitchen_sink_stuff();
     echo.initialize();
     stream_edit.initialize();
